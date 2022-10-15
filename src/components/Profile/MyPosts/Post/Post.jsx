@@ -1,15 +1,17 @@
 import React from 'react';
 import s from './Post.module.css';
 
-const Post = () => {
+const Post = (props) => {
+
     return (
         <div className={s.item}>
             <img src='https://cdn.nba.com/headshots/nba/latest/1040x760/77142.png' />
-            Post 1
+            { props.message }
             <div>
-            <span>like</span>
+                <span>like</span> { props.likesCount }
             </div>
-        </div>)
+        </div>
+    )
 }
 
 export default Post
